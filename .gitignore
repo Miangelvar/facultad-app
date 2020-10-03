@@ -60,3 +60,7 @@ package-lock.json
 package.json
 
 *.json
+
+src/.idea/codeStyles/
+
+src/.idea/
