@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "facultad-app"
+  "defaultProject": "facultad-app",
+  "cli": {
+    "analytics": "d5211805-1dbf-4c4b-9084-0d9fcb32f8f5"
+  }
 }
