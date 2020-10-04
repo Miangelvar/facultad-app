@@ -9,6 +9,7 @@ import { ListFacultiesComponent } from './list-faculties/list-faculties.componen
 import { AddEditFacultyComponent } from './add-edit-faculty/add-edit-faculty.component';
 import {FormsModule} from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,

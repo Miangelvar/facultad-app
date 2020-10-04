@@ -1,9 +1,42 @@
-<app-navigation></app-navigation>
-<div class="bg-white">
-  <div class="container bg-light">
-    <h1 class="mt-4 text-center">{{title}}</h1>
-    <hr>
-<!--    <app-list-faculties></app-list-faculties>-->
-<app-add-edit-faculty></app-add-edit-faculty>
+<nav class="navbar navbar-dark bg-primary">
+  <a class="navbar-brand"href="/">
+    Crud de la Unillanos
+  </a>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <ul  class="list-group">
+        <li *ngFor="let estudiante of estudianteArray " class="list-group-item-action"
+         (click)="openForEdit(estudiante)"
+         [class.active]="estudiante == selectedEstudiante"
+         >
+          <span class="badge badge-primary">{{estudiante.codigo}}</span>-{{estudiante.nombre}} - {{estudiante.correo}}
+        </li>
+      </ul>
+      <div class="card mt-4">
+        <div class="card-body">
+          <div class="card-title">
+            Inserte un nuevo estudiante
+          </div>
+          <div class="form-group">
+            <input type="text" [(ngModel)]="selectedEstudiante.nombre" placeholder="Inserte el Nombre" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" [(ngModel)]="selectedEstudiante.codigo" placeholder="Inserte el Codigo" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" [(ngModel)]="selectedEstudiante.correo" placeholder="Inserte el correo" class="form-control">
+          </div>
+          <button (click)="addOrEdit()" class="btn-primary">
+            Enviar
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="img"></div>
+    </div>
   </div>
 </div>
