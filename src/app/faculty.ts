@@ -1,4 +1,4 @@
-export interface Faculty {
+export class Faculty {
   id: number;
   name: string;
   careers: [];

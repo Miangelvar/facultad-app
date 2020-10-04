@@ -1,5 +1,5 @@
 <div class="container my-5">
-  <h3> Add Faculty</h3>
+  <h3 *ngIf="faculty">{{faculty.name}} Details</h3>
   <div class="card">
     <div class="card-body">
       <div class="col-md-10">
@@ -24,7 +24,9 @@
 <!--            </div>-->
 
             <div class="col-md-6">
-              <input type="submit" class="btn btn-primary" value=" Submit ">
+              <button (click)="create()" class="btn btn-success">Submit</button>
+              <button *ngIf="faculty" (click)="update()" class="btn btn-success">Submit</button>
+              <button (click)="goBack()" class="ml-2 btn btn-primary">Go Back</button>
             </div>
 
           </div>

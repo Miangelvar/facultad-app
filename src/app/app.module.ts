@@ -8,6 +8,8 @@ import { FacultiesComponent } from './faculties/faculties.component';
 import { ListFacultiesComponent } from './list-faculties/list-faculties.component';
 import { AddEditFacultyComponent } from './add-edit-faculty/add-edit-faculty.component';
 import {FormsModule} from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import {FormsModule} from '@angular/forms';
     NavigationComponent,
     FacultiesComponent,
     ListFacultiesComponent,
-    AddEditFacultyComponent
+    AddEditFacultyComponent,
+    DashboardComponent,
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
-        FormsModule
+        FormsModule,
+      HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]

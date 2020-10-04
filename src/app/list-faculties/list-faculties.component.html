@@ -1,8 +1,8 @@
-<div *ngIf="faculties" class="container">
+<div *ngIf="faculties" class="container mt-4">
   <h2>{{title}}</h2>
-  <a href="#" class="btn btn-primary"><i class="fas fa-user-plus"> Add Faculty</i></a>
+  <a routerLink="/faculties/add" class="btn btn-primary"><i class="fas fa-user-plus"> Add Faculty</i></a>
   <div class="mt-2">
-    <table class="table table-hover text-center">
+    <table class="table table-hover text-center bg-white">
       <thead class="thead-dark">
       <tr>
         <th *ngFor="let col of columns">{{col}}</th>
@@ -14,9 +14,8 @@
         <td *ngFor="let col of columns">
           {{faculty[col]}}
         </td>
-
         <td>
-          <a href="#" class="btn btn-primary"><i class="fas fa-user-times"></i></a>
+          <a routerLink="/faculties/{{faculty.id}}" class="btn btn-primary"><i class="fas fa-user-edit"></i></a>
           <a href="#" class=" ml-2 btn btn-danger"><i class="fas fa-user-times"></i></a>
         </td>
       </tr>
